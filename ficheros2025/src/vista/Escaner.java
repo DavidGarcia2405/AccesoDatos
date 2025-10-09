@@ -16,6 +16,10 @@ public class Escaner {
         sc.nextLine();
         return numero;
     }
+    public static String pedirUsuario(String usuario){
+        Consola.mostrarString(usuario);
+        return sc.nextLine();
+    }
 
     public static void cerrar() {
         sc.close();

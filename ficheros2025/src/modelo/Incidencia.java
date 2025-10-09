@@ -5,30 +5,25 @@ import java.time.LocalTime;
 
 public class Incidencia {
 
-    private int id;
     private LocalDate fecha;
     private LocalTime hora;
-    private String usuario;
     private String excepcion;
+    private String usuario;
 
-    public Incidencia(int id, LocalDate fecha, String usuario, String excepcion) {
-        this.id = id;
-        this.fecha = LocalDate.now();
-        this.hora = LocalTime.now();
-        this.usuario = usuario;
+    public Incidencia( LocalDate fecha, LocalTime hora, String excepcion, String usuario) {
+        this.fecha = fecha;
+        this.hora = hora;
         this.excepcion = excepcion;
+        this.usuario = usuario;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public LocalDate getFecha() {
         return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
     public LocalTime getHora() {
@@ -39,14 +34,6 @@ public class Incidencia {
         this.hora = hora;
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
     public String getExcepcion() {
         return excepcion;
     }
@@ -55,15 +42,20 @@ public class Incidencia {
         this.excepcion = excepcion;
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
-        return "Incidencia{" +
-                "id=" + id +
-                ", fecha=" + fecha +
-                ", hora=" + hora +
-                ", usuario='" + usuario + '\'' +
-                ", excepcion='" + excepcion + '\'' +
-                '}';
+        return  fecha +
+                ";" + hora +
+                ";" + excepcion +
+                ";" + usuario ;
     }
 }
 

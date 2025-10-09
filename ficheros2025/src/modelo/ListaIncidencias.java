@@ -1,27 +1,23 @@
 package modelo;
 
+
 import java.util.ArrayList;
 
 public class ListaIncidencias {
 
-    private ArrayList<Incidencia> lista;
+    private ArrayList<Incidencia> incidencias;
 
     // Constructor para inicializar la lista
     public ListaIncidencias() {
-        lista = new ArrayList<>();
+        incidencias = new ArrayList<>();
     }
 
     public void agregar(Incidencia i) {
-        lista.add(i);
+        incidencias.add(i);
     }
 
-    public void mostrarTodas() {
-        if (lista.isEmpty()) {
-            System.out.println("No hay incidencias.");
-        } else {
-            for (Incidencia i : lista) {
-                System.out.println(i);
-            }
-        }
+    public ArrayList<Incidencia> getIncidencias() {
+        return incidencias;
     }
+
 }
